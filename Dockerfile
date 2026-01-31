@@ -22,7 +22,7 @@ COPY src src
 RUN ./gradlew bootJar --no-daemon
 
 # Stage 2: Run
-FROM eclipse-temurin:17-jre
+FROM eclipse-temurin:17-jre-alpine
 
 WORKDIR /app
 
