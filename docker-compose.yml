@@ -76,8 +76,6 @@ services:
       CLUSTER_ID: MkU3OEVBNTcwNTJENDM2Qk
     ports:
       - "9092:9092"
-    volumes:
-      - kafka-data:/tmp/kraft-combined-logs
     healthcheck:
       test: ["CMD-SHELL", "/opt/kafka/bin/kafka-broker-api-versions.sh --bootstrap-server localhost:9092 > /dev/null 2>&1"]
       interval: 10s
@@ -94,4 +92,3 @@ networks:
 volumes:
   mysql-data:
   redis-data:
-  kafka-data:
